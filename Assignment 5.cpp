@@ -14,6 +14,33 @@ int turn_left(){
 	stop(0);
 return 0;}
 
+int turn_right(){
+	init();
+	
+	set_motor(1, 155);
+	set_motor(2, 155);
+	sleep(1, 0); // how long we leave the motors on for
+	stop();
+return 0;}
+
+int drive_straight(){
+	init();
+	
+	set_motor(1,155);
+	set_motor(2,-155);
+	sleep1(1,0);
+	stop();
+return 0;}
+
+int reverse(){ //reverse slowly
+	init();
+	
+	set_motor(1, -50);
+	set_motor(2, 50);
+	sleep1(1,0);
+	stop();
+return 0;}
+
 int main(){
 	init();
 	
